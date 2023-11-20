@@ -2316,7 +2316,7 @@ export default abstract class Server<ServerOptions extends Options = Options> {
           )
         } else if (isAppPageRouteModule(routeModule)) {
           if (
-            !opts.experimental.ppr &&
+            !renderOpts.experimental.ppr &&
             isPrefetchRSCRequest &&
             process.env.NODE_ENV === 'production' &&
             !this.minimalMode

@@ -43,11 +43,11 @@ swc_core = { version = "0.86.60", features = [
 testing = { version = "0.35.10" }
 
 # Turbo crates
-turbopack-binding = { path = "/workspaces/nextpack/turbo/crates/turbopack-binding" } # last tag: "turbopack-231109.2"
+turbopack-binding = { git = "https://github.com/vercel/turbo.git", branch = "sokra/trace-server" } # last tag: "turbopack-231109.2"
 # [TODO]: need to refactor embed_directory! macro usages, as well as resolving turbo_tasks::function, macros..
-turbo-tasks = { path = "/workspaces/nextpack/turbo/crates/turbo-tasks" } # last tag: "turbopack-231109.2"
+turbo-tasks = { git = "https://github.com/vercel/turbo.git", branch = "sokra/trace-server" } # last tag: "turbopack-231109.2"
 # [TODO]: need to refactor embed_directory! macro usage in next-core
-turbo-tasks-fs = { path = "/workspaces/nextpack/turbo/crates/turbo-tasks-fs" } # last tag: "turbopack-231109.2"
+turbo-tasks-fs = { git = "https://github.com/vercel/turbo.git", branch = "sokra/trace-server" } # last tag: "turbopack-231109.2"
 
 # General Deps
 

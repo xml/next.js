@@ -169,6 +169,7 @@ function isServerError(error: ReadyRuntimeError) {
 
 function isRuntimeWarning(error: ReadyRuntimeError) {
   return [
+    'Text content does not match server-rendered HTML.',
     'This Suspense boundary received an update before it finished hydrating.',
     'Hydration failed because the initial UI does not match what was rendered on the server.',
     'There was an error while hydrating. Because the error happened outside of a Suspense boundary, the entire root will switch to client rendering.',
@@ -649,6 +650,7 @@ export function Errors({
       >
         <DialogHeader
           className="errors-header"
+          versionInfo={versionInfo}
           close={() => dispatch({ type: ErrorsActionType.Minimize })}
         >
           <DialogHeaderTabList>
@@ -669,7 +671,6 @@ export function Errors({
               </Tab>
             ))}
           </DialogHeaderTabList>
-          {versionInfo ? <VersionStalenessInfo {...versionInfo} /> : null}
         </DialogHeader>
         {tabs.map((tab) => (
           <TabPanel
